@@ -1,5 +1,6 @@
 {
   "name": "tpp",
+  "publisher": "taezeem14",
   "displayName": "T++ Language",
   "description": "Provides syntax highlighting, language configuration, and tooling support for the T++ programming language — a human-first, natural English-based programming system.",
   "version": "0.0.1",
