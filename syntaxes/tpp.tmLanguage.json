@@ -1,32 +1,66 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "T++",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.tpp",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.tpp",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.tpp",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.tpp"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "T++",
+  "patterns": [
+    { "include": "#keywords" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#comments" },
+    { "include": "#operators" }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.tpp",
+          "match": "\\b(if|else|while|for|return|break|continue)\\b"
+        },
+        {
+          "name": "keyword.declaration.tpp",
+          "match": "\\b(let|be|set|define|function)\\b"
+        },
+        {
+          "name": "keyword.other.tpp",
+          "match": "\\b(say|print|increase|decrease|by|to|is|not|and|or)\\b"
+        }
+      ]
+    },
+
+    "strings": {
+      "name": "string.quoted.double.tpp",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.tpp",
+          "match": "\\\\."
+        }
+      ]
+    },
+
+    "numbers": {
+      "name": "constant.numeric.tpp",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.tpp",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.tpp",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+
+    "operators": {
+      "name": "keyword.operator.tpp",
+      "match": "\\b(plus|minus|times|divided|equals|greater|less)\\b|[=+\\-*/]"
+    }
+  },
+  "scopeName": "source.tpp"
 }
