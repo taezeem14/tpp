@@ -4,7 +4,7 @@
   "description": "Provides syntax highlighting, language configuration, and tooling support for the T++ programming language — a human-first, natural English-based programming system.",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.115.0"
+    "vscode": "^1.85.0"
   },
   "categories": [
     "Programming Languages"
