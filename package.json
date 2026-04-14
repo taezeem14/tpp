@@ -20,6 +20,12 @@
       "language": "tpp",
       "scopeName": "source.tpp",
       "path": "./syntaxes/tpp.tmLanguage.json"
-    }]
+    }],
+    "snippets": [
+  {
+    "language": "tpp",
+    "path": "./tpp.code-snippets"
+  }
+]
   }
 }
