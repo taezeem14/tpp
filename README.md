@@ -1,4 +1,6 @@
-# tpp README
+# T++ VS Code Extension
+
+Supports the T++ language ecosystem (runtime `3.1.3`) with syntax highlighting, language configuration, and snippets.
 
 This is the README for your extension "tpp". After writing up a brief description, we recommend including the following sections.
 
